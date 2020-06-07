@@ -1,5 +1,6 @@
 import numpy as numpy
 from cv2 import cv2
+# import cv2 as cv2
 import torch
 from utils import *
 import argparse
@@ -7,7 +8,7 @@ import os
 from model import Darknet
 
 
-
+print(torch.__version__)
 def argparser():
     """
     Parse arguements to the detect module
@@ -17,7 +18,7 @@ def argparser():
     parser.add_argument("--input_image", dest = 'image', help = "image to perform detection")
     parser.add_argument("--weights",dest = 'weightsfile', help="yolo3 weights file",
                                     default = "yolov3.weights", type = str)
-    parser.add_argument("--classes",dest='classfile',help="file containing classes")
+    parser.add_argument("--classes",dest='classfile',help="file containing classes", default='coco.names')
 
     return parser.parse_args()
 
@@ -41,6 +42,7 @@ model.load_weights(weightfile)
 print("Network successfully loaded")
 classes = load_classes(classfile)
 print('Classes loaded')
+
 
 
 conf_inp_dim = int(model.net_info["height"])#608
