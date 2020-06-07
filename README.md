@@ -24,7 +24,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 Now you can detect images using
 
 ```
-python detect.py --input_image imagename --claasses classfile
+python detect.py --input_image imagename --classes classfile
 ```
 
 Output will be saved as 'detected_' + imagename
@@ -38,6 +38,8 @@ Try this markdown:
 ![image](https://github.com/arunm8489/YOLOv3-detection-from-scratch/blob/master/messi.jpg)
 ![detected image](https://github.com/arunm8489/YOLOv3-detection-from-scratch/blob/master/detected_messi.jpg)
 
+![image](https://github.com/arunm8489/YOLOv3-detection-from-scratch/blob/master/dog-cycle-car.png)
+![detected](https://github.com/arunm8489/YOLOv3-detection-from-scratch/blob/master/detected_dog-cycle-car.png)
 
 
 
